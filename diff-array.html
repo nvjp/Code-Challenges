@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diff Array</title>
+</head>
+<body>
+    <script>
+        var arry1 = [1,2,3];
+        var arry2 = [3,2,4,5];
+
+        function diffArry(arry1,arry2) {
+            return arry2.filter(item => arry1.indexOf(item) === -1);
+        }
+        console.log(diffArry(arry1,arry2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUM ALL</title>
+</head>
+
+<body>
+    <script>
+        var arry = [1, 10];
+        function sumAll(arry) {
+            var min = Math.min(...arry);
+            var max = Math.max(...arry);
+            var result = 0;
+            for (var i = min; i <= max; i++) {
+                console.log(i);
+                result += i;
+            }
+            return result;
+        }
+
+        console.log(sumAll(arry));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falsy Bouncer</title>
+</head>
+
+<body>
+    <script>
+        var arry = ['abc', 'jaya', '', false];
+        function bouncer(arry) {
+            return arry.filter(item => !!item);
+        }
+        console.log(bouncer(arry));
+    </script>
+</body>
+
+</html>

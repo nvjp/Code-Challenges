@@ -1,0 +1,31 @@
+<<!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>Factorial</title>
+    </head>
+
+    <body>
+        <script>
+
+            function fact(num) {
+                var result = 1;
+                for (var i = 1; i <=num; i++) {
+                    result *= i;
+                }
+                return result;
+            }
+            // function fact(num) {
+            //     var result = 1;
+            //     while(num >0){
+            //         result = result * num;
+            //         num--
+            //     }
+            //     return result;fun
+            // }
+
+            document.write(fact(1));
+        </script>
+    </body>
+
+    </html>

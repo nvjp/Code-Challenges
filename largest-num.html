@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest number</title>
+</head>
+
+<body>
+    <script>
+        var arry = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+        // function largest(arry) {
+        //     var newArry = arry.map(item => {
+        //         return Math.max(...item);
+        //     })
+        //     console.log(newArry);
+        //     return newArry;
+        // }
+
+        function largest(arry) {
+            var initial = 1;
+            for (var item of arry) {
+                for (var i = 0; i < item.length; i++) {
+
+                    if (initial < item[i]) {
+                        initial = item[i]
+                    }
+                }
+                document.write(initial+ ' ');
+            }
+        }
+        largest(arry);
+    </script>
+</body>
+
+</html>

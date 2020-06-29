@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Index for insert element</title>
+</head>
+
+<body>
+    <script>
+        var arry = [50, 30, 40]
+        function getIndexToIns(arry, num) {
+            var narry = arry.sort((a, b) => a - b);
+            var index = narry.findIndex(element => num <= element);
+            var i = index === -1 ? narry.length : index;
+            narry.splice(i, 0, num);
+            return narry
+        }
+        console.log(getIndexToIns(arry, 35));
+    </script>
+</body>
+
+</html>

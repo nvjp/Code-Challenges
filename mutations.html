@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutations</title>
+</head>
+<body>
+    <script>
+        var arry = ['hello', 'he'];
+        function mutation(arry) {
+            for(var letter of arry[1]) {
+                console.log(letter);
+                if(arry[0].indexOf(letter) === -1) {
+                    return 'not exist'
+                }
+            }
+            return 'exist';
+        }
+        console.log(mutation(arry))
+    </script>
+</body>
+</html>

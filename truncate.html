@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truncate str</title>
+</head>
+<body>
+    <script>
+        var str = 'VenkataJayaprakash Nagabirva';
+
+        function truncate(str, n) {
+            if(str.length > n) {
+                return str.slice(0,5) + '...';
+            }
+            return str;
+        }
+        document.write(truncate(str, 5));
+    </script>
+</body>
+</html>

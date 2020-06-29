@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest-word</title>
+</head>
+
+<body>
+
+    <script>
+        var sentence = 'largest word in the str';
+
+        function largest(str) {
+           return str.split(' ').sort((a,b) => b -a)[0].length;
+        }
+
+        document.write(largest(sentence));
+
+    </script>
+</body>
+
+</html>

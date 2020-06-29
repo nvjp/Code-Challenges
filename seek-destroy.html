@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seek Destroy</title>
+</head>
+
+<body>
+    <script>
+        var arry = [1, 5, 2, 3, 6];
+        function seekDestroy() {
+            var narry = arguments[0].filter(item => {
+                return item != arguments[1] && item != arguments[2];
+            });
+            return narry;
+            
+        }
+        console.log(seekDestroy(arry, 5, 6));
+    </script>
+</body>
+
+</html>

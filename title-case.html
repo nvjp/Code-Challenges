@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title case</title>
+</head>
+
+<body>
+    <script>
+        var str = 'iam a nauthy boy';
+        function titleCase(str) {
+            var titled = str.split(' ').map(item => {
+                return item[0].toUpperCase() + item.slice(1);
+            })
+            return titled.join(' ');
+        }
+        document.write(titleCase(str));
+    </script>
+</body>
+
+</html>

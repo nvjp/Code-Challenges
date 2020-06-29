@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a String </title>
+</head>
+
+<body>
+    <script>
+        var str = 'prakash'
+        /* method 1 */
+        // function reverseStr(str) {
+        //     return str.split('').reverse().join('');
+        // }
+
+        /* method 2 */
+        function reverseStr(str) {
+            var final = '';
+            for (var i = str.length - 1; i >= 0; i--) {
+                final += str[i];
+            }
+            return final;
+        }
+
+        document.write(reverseStr(str));
+    </script>
+</body>
+
+</html>
