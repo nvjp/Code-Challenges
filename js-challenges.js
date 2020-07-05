@@ -1,3 +1,71 @@
+// 21. Write a JavaScript program to flatten a nested (any depth) array. If you pass shallow, the array will only be flattened a single level. Go to the editor
+// Sample Data :
+// console.log(flatten([1, [2], [3, [[4]]],[5,6]]));
+// [1, 2, 3, 4, 5, 6]
+// console.log(flatten([1, [2], [3, [[4]]],[5,6]], true));
+// [1, 2, 3, [[4]], 5, 6]
+
+
+
+// 22. Write a JavaScript program to compute the union of two arrays. Go to the editor
+// Sample Data :
+// console.log(union([1, 2, 3], [100, 2, 1, 10]));
+// [1, 2, 3, 10, 100]
+
+function union(a1, a2) {
+    for (var item of a2) {
+        a1.push(item);
+    }
+    return Array.from(new Set(a1.sort((a, b) => a - b)));
+}
+
+// 23. Write a JavaScript function to find the difference of two arrays. Go to the editor
+// Test Data :
+// console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+// ["3", "10", "100"]
+// console.log(difference([1, 2, 3, 4, 5], [1, [2], [3, [[4]]],[5,6]]));
+// ["6"]
+// console.log(difference([1, 2, 3], [100, 2, 1, 10]));
+// ["3", "10", "100"]
+function difference(a1, a2) {
+    var arry1 = a1.concat(a2);
+    var arry2 = [];
+    recurFn(arry2, arry1)
+    console.log(arry2)
+    var arry2 = arry2.filter((item) => a1.toString().indexOf(item) === -1 || a2.toString().indexOf(item) === -1);
+    return arry2.sort((a, b) => a - b);
+}
+
+function recurFn(arry2, arry1) {
+    for (var i = 0; i < arry1.length; i++) {
+        if (Array.isArray(arry1[i])) {
+            recurFn(arry2, arry1[i])
+        } else {
+            arry2.push(arry1[i])
+        }
+    }
+    return arry2;
+}
+// 24. Write a JavaScript function to remove. 'null', '0', '""', 'false', 'undefined' and 'NaN' values from an array. Go to the editor
+// Sample array : [NaN, 0, 15, false, -22, '',undefined, 47, null]
+// Expected result : [15, -22, 47]
+
+function removeNulls(arry) {
+    return arry.filter(item => item);
+}
+
+// 25. Write a JavaScript function to sort the following array of objects by title value. Go to the editor
+// Sample object :
+
+// var library = [ 
+//    { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+//    { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+//    { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+//    ];
+
+function compare_to_sort(x, y) {
+    return x.title - y.title
+}
 // 20. Write a JavaScript program to find 
 // duplicate values in a JavaScript array. 
 function duplArry(arry) {
